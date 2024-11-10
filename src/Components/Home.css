@@ -1,0 +1,124 @@
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adding animated neon effect */
+.home-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.1), transparent 70%);
+    mix-blend-mode: screen;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+/* Adding moving neon lines */
+.home-container::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0, rgba(255, 255, 255, 0.05) 2px, transparent 2px, transparent 4px);
+    animation: moveBackground 20s linear infinite;
+}
+
+@keyframes moveBackground {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+/* Style for intro section and buttons */
+.intro-section {
+    margin-bottom: 2em;
+    position: relative;
+    z-index: 1;
+}
+
+.intro-text {
+    font-size: 2.5em;
+    color: #fff;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff00ff, 0 0 15px #ff00ff, 0 0 20px #ff00ff;
+}
+
+.animated-text {
+    font-size: 1.2em;
+    color: #ddd;
+    animation: fadeInUp 3s ease-in-out;
+    text-shadow: 0 0 3px #ddd, 0 0 6px #00eaff, 0 0 9px #00eaff, 0 0 12px #00eaff;
+}
+
+.button-container {
+    display: flex;
+    gap: 1em;
+    position: relative;
+    z-index: 1;
+}
+
+.register-button,
+.login-button {
+    padding: 12px 24px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.register-button {
+    background-color: #4caf50; /* green for register */
+    text-shadow: 0 0 5px #4caf50, 0 0 10px #4caf50;
+}
+
+.login-button {
+    background-color: #1e90ff; /* blue for login */
+    text-shadow: 0 0 5px #1e90ff, 0 0 10px #1e90ff;
+}
+
+.register-button:hover,
+.login-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

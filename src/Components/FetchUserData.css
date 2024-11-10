@@ -1,0 +1,43 @@
+.fetch-user-data-container {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 20px;
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    margin: 10px 0;
+  }
+  
+  .popup {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  .popup.error {
+    background-color: #f8d7da;
+  }
+  
+  .popup.success {
+    background-color: #d4edda;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+  }
+  

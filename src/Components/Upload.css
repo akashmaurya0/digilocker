@@ -1,0 +1,134 @@
+/* Container for the entire page */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f4f4f9;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Header */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* Form styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+  }
+  
+  input[type="file"] {
+    margin: 20px 0;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #55a7ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  
+  /* Success message styling */
+  .file-preview {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .file-preview a {
+    color: #4CAF50;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  .file-preview a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Error message styling */
+  .error {
+    color: red;
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  /* Popup styling */
+.popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-width: 300px;
+    text-align: center;
+  }
+  
+  .popup.success {
+    border-left: 5px solid green;
+  }
+  
+  .popup.error {
+    border-left: 5px solid red;
+  }
+  
+  .popup p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  .popup button {
+    background-color: #ccc;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .popup button:hover {
+    background-color: #aaa;
+  }
+  .popup a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .popup a:hover {
+    text-decoration: underline;
+  }
+  
